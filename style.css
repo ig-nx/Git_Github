@@ -9,3 +9,22 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#mensaje {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+button:disabled:hover {
+    background-color: #ccc;
+}
