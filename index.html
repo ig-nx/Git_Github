@@ -1,28 +1,523 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Proyecto GitHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curso Git Completo - Proyecto de Practica</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 style="text-align: center; margin-top: 60px; font-family: Arial, sans-serif; color: #8e0e88;" >Mi primer proyecto con Git</h1>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <p style="text-align: center; margin-top: 20px; font-size: 18px; font-family: Arial, sans-serif; color: #333;">Esto es una prueba de Git en GitHub</p>
+    <header class="hero" id="top">
+        <nav class="top-nav">
+            <div class="brand">
+                <span class="logo">git</span>
+                <div>
+                    <p class="brand-title">Curso Git Completo</p>
+                    <p class="brand-subtitle">Proyecto de practica con muchas secciones</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">Mapa</a></li>
+                <li><a href="#ruta">Ruta</a></li>
+                <li><a href="#cheatsheet">Cheatsheet</a></li>
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#commit-builder">Commits</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="ghost" id="theme-toggle" type="button">Modo enfoque</button>
+                <button class="primary" data-modal-open type="button">Guia rapida</button>
+            </div>
+        </nav>
 
-    # Agregamos una mejora y un js en app.js
-    <h1 id="titulo-js" style="text-align: center; margin-top: 20px; font-size: 18px; font-family: Arial, sans-serif; color: #333;" onclick="mostrarAlerta()">GIT!!! en app.js</h1>
-    
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="eyebrow">Tu laboratorio Git</p>
+                <h1>Un proyecto completo para practicar ramas, merges y flujo real</h1>
+                <p class="lead">
+                    Esta pagina incluye componentes, formularios, simuladores y tareas para generar commits frecuentes.
+                    Ideal para un curso de Git con practicas reales.
+                </p>
+                <div class="hero-actions">
+                    <a class="primary" href="#ruta">Ver ruta</a>
+                    <a class="ghost" href="#playground">Ir al playground</a>
+                </div>
+                <p class="hero-meta">Ultima carga: <span data-current-date>cargando...</span></p>
+            </div>
+            <div class="hero-card reveal">
+                <h2>Checklist rapido</h2>
+                <ul class="checklist">
+                    <li>Inicializa el repo y crea ramas por modulo</li>
+                    <li>Practica staging avanzado con `git add -p`</li>
+                    <li>Simula conflictos con el playground</li>
+                    <li>Etiqueta versiones con tags y releases</li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-    <p id="mensaje">Presiona el botón para cambiar el texto..... github</p>
-    
-    <button disabled>Cambiar texto</button>
+    <main id="contenido">
+        <section class="section reveal" id="overview">
+            <div class="section-header">
+                <h2>Mapa general</h2>
+                <p>Secciones pensadas para generar muchos cambios y commits.</p>
+            </div>
+            <div class="grid three">
+                <article class="card">
+                    <h3>Objetivo</h3>
+                    <p>Dominar Git desde cero: staging, ramas, rebase, tags y resolucion de conflictos.</p>
+                    <span class="pill">Practica guiada</span>
+                </article>
+                <article class="card">
+                    <h3>Requisitos</h3>
+                    <p>Editor de codigo, terminal y ganas de crear historias en el repositorio.</p>
+                    <span class="pill">Fundamentos</span>
+                </article>
+                <article class="card">
+                    <h3>Herramientas</h3>
+                    <p>Git, GitHub, Markdown y un flujo de trabajo con ramas tematicas.</p>
+                    <span class="pill">Stack basico</span>
+                </article>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <p class="stat-value" data-counter="12">0</p>
+                    <p class="stat-label">modulos</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-value" data-counter="48">0</p>
+                    <p class="stat-label">commits sugeridos</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-value" data-counter="6">0</p>
+                    <p class="stat-label">ramas tematicas</p>
+                </div>
+            </div>
+        </section>
 
-    <button onclick="cambiarTexto()">Cambiar texto</button>
+        <section class="section reveal" id="ruta">
+            <div class="section-header">
+                <h2>Ruta del curso</h2>
+                <p>Una ruta sugerida para practicar cada concepto con cambios reales.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-step">01</span>
+                    <div>
+                        <h3>Inicio y commits basicos</h3>
+                        <p>Configura tu identidad, crea el primer commit y documenta el objetivo del proyecto.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-step">02</span>
+                    <div>
+                        <h3>Staging avanzado</h3>
+                        <p>Divide cambios con `git add -p` y practica mensajes de commit claros.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-step">03</span>
+                    <div>
+                        <h3>Ramas y merges</h3>
+                        <p>Crea ramas para cada seccion, fusiona y resuelve conflictos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-step">04</span>
+                    <div>
+                        <h3>Rebase y limpieza</h3>
+                        <p>Reordena commits, combina cambios y deja un historial limpio.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-step">05</span>
+                    <div>
+                        <h3>Remotos y colaboracion</h3>
+                        <p>Publica en GitHub, crea PRs y usa issues como guia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <p id="mensaje" style="color: red;">Prueba de Git</p>
+        <section class="section reveal" id="flujos">
+            <div class="section-header">
+                <h2>Flujos de trabajo</h2>
+                <p>Usa tabs para comparar estrategias de trabajo en equipo.</p>
+            </div>
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button is-active" type="button" data-tab-target="tab-flujo">Flujo basico</button>
+                    <button class="tab-button" type="button" data-tab-target="tab-gitflow">Git Flow</button>
+                    <button class="tab-button" type="button" data-tab-target="tab-trunk">Trunk</button>
+                </div>
+                <div class="tab-panels">
+                    <div class="tab-panel is-active" id="tab-flujo">
+                        <p>Una rama principal, ramas cortas por tarea y merges frecuentes.</p>
+                        <ul class="plain-list">
+                            <li>Ideal para equipos pequenos</li>
+                            <li>Requiere disciplina en naming</li>
+                            <li>Permite releases rapidos</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel" id="tab-gitflow">
+                        <p>Separacion estricta entre desarrollo, releases y hotfix.</p>
+                        <ul class="plain-list">
+                            <li>Bueno para productos con ciclos largos</li>
+                            <li>Releases planificadas</li>
+                            <li>Mayor control sobre versiones</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel" id="tab-trunk">
+                        <p>Integracion continua en una rama principal con feature flags.</p>
+                        <ul class="plain-list">
+                            <li>Entrega continua</li>
+                            <li>Commits pequenos y frecuentes</li>
+                            <li>Requiere pruebas automaticas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <p id="mensaje" style="color: blue;">Segunda prueba de Git en la rama agregacion</p>
+        <section class="section reveal" id="cheatsheet">
+            <div class="section-header">
+                <h2>Cheat sheet interactivo</h2>
+                <p>Filtra y copia comandos para tus practicas.</p>
+            </div>
+            <div class="command-toolbar">
+                <input id="command-filter" type="search" placeholder="Busca comando, palabra o alias" aria-label="Buscar comandos">
+                <div class="command-count"><span id="command-count">0</span> comandos</div>
+            </div>
+            <div class="command-list" id="command-list">
+                <article class="command-item" data-command="git status" data-tags="estado status working tree">
+                    <div class="command-main">
+                        <code>git status</code>
+                        <p>Revisa el estado del area de trabajo.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git status">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git add -p" data-tags="stage parcial patch">
+                    <div class="command-main">
+                        <code>git add -p</code>
+                        <p>Agrega cambios por partes para commits limpios.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git add -p">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git commit -m" data-tags="commit mensaje">
+                    <div class="command-main">
+                        <code>git commit -m "mensaje"</code>
+                        <p>Crea un commit con mensaje corto.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git commit -m \"mensaje\"">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git log --oneline" data-tags="historial log">
+                    <div class="command-main">
+                        <code>git log --oneline</code>
+                        <p>Resumen rapido del historial.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git log --oneline">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git checkout -b" data-tags="branch nueva rama">
+                    <div class="command-main">
+                        <code>git checkout -b feature/nueva</code>
+                        <p>Crea una nueva rama y cambia a ella.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git checkout -b feature/nueva">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git merge" data-tags="fusion merge">
+                    <div class="command-main">
+                        <code>git merge feature/nueva</code>
+                        <p>Fusiona cambios de otra rama.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git merge feature/nueva">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git rebase -i" data-tags="rebase interactive">
+                    <div class="command-main">
+                        <code>git rebase -i HEAD~3</code>
+                        <p>Reordena, edita o combina los ultimos commits.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git rebase -i HEAD~3">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git stash" data-tags="stash guardar temporal">
+                    <div class="command-main">
+                        <code>git stash push -m "avance"</code>
+                        <p>Guarda trabajo temporalmente sin hacer commit.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git stash push -m \"avance\"">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git tag" data-tags="tag version">
+                    <div class="command-main">
+                        <code>git tag -a v1.0 -m "release"</code>
+                        <p>Crea una version etiquetada.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git tag -a v1.0 -m \"release\"">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git reset --soft" data-tags="reset soft">
+                    <div class="command-main">
+                        <code>git reset --soft HEAD~1</code>
+                        <p>Vuelve un commit atras manteniendo staging.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git reset --soft HEAD~1">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git revert" data-tags="revert deshacer">
+                    <div class="command-main">
+                        <code>git revert &lt;hash&gt;</code>
+                        <p>Revierte cambios creando un nuevo commit.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git revert <hash>">Copiar</button>
+                </article>
+                <article class="command-item" data-command="git push origin" data-tags="push remoto">
+                    <div class="command-main">
+                        <code>git push origin main</code>
+                        <p>Sube tus cambios al remoto.</p>
+                    </div>
+                    <button class="ghost" type="button" data-copy="git push origin main">Copiar</button>
+                </article>
+            </div>
+            <p class="command-empty" id="command-empty" hidden>No hay coincidencias. Prueba otra palabra.</p>
+        </section>
+
+        <section class="section reveal" id="playground">
+            <div class="section-header">
+                <h2>Playground Git</h2>
+                <p>Simula estados, crea commits y practica resoluciones de conflictos.</p>
+            </div>
+            <div class="grid two">
+                <article class="card">
+                    <h3>Simulador de git status</h3>
+                    <label class="field">
+                        Estado actual
+                        <select id="status-state">
+                            <option value="clean">Working tree limpia</option>
+                            <option value="modified">Archivos modificados</option>
+                            <option value="staged">Cambios en staging</option>
+                            <option value="conflict">Conflicto de merge</option>
+                        </select>
+                    </label>
+                    <pre class="terminal" id="status-output"></pre>
+                    <p class="muted" id="status-description"></p>
+                </article>
+
+                <article class="card">
+                    <h3>Registro de commits</h3>
+                    <div class="log-controls">
+                        <input id="log-message" type="text" placeholder="Mensaje del commit">
+                        <button class="primary" type="button" id="log-add">Simular commit</button>
+                    </div>
+                    <ul class="commit-log" id="commit-log">
+                        <li>
+                            <span class="commit-hash">f3a9b2e</span>
+                            <span class="commit-message">Inicio del proyecto</span>
+                            <span class="commit-time">hace 1 dia</span>
+                        </li>
+                        <li>
+                            <span class="commit-hash">a61c4d9</span>
+                            <span class="commit-message">Agrega seccion de ruta</span>
+                            <span class="commit-time">hace 5 horas</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal" id="practica">
+            <div class="section-header">
+                <h2>Checklist de practicas</h2>
+                <p>Marca tareas y guarda tu avance con localStorage.</p>
+            </div>
+            <div class="progress-card">
+                <div class="progress-header">
+                    <h3>Avance del curso</h3>
+                    <span id="progress-value">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <span id="progress-bar"></span>
+                </div>
+                <div class="task-grid">
+                    <label class="task">
+                        <input type="checkbox" data-progress="init">
+                        <span>Crear repo y primer commit</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="readme">
+                        <span>Documentar README y objetivos</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="branch">
+                        <span>Crear rama para features</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="merge">
+                        <span>Resolver un conflicto real</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="rebase">
+                        <span>Rebase interactivo con 3 commits</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="stash">
+                        <span>Guardar cambios con stash</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="tag">
+                        <span>Crear tag de version</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="remote">
+                        <span>Publicar en GitHub</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="pr">
+                        <span>Abrir y mergear un PR</span>
+                    </label>
+                    <label class="task">
+                        <input type="checkbox" data-progress="release">
+                        <span>Preparar release final</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="commit-builder">
+            <div class="section-header">
+                <h2>Constructor de commits</h2>
+                <p>Genera mensajes claros y copialos al portapapeles.</p>
+            </div>
+            <div class="grid two">
+                <form class="card" id="commit-form">
+                    <label class="field">
+                        Tipo de cambio
+                        <select id="commit-type">
+                            <option value="feat">feat</option>
+                            <option value="fix">fix</option>
+                            <option value="docs">docs</option>
+                            <option value="style">style</option>
+                            <option value="refactor">refactor</option>
+                            <option value="test">test</option>
+                            <option value="chore">chore</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        Alcance (opcional)
+                        <input id="commit-scope" type="text" placeholder="ui, auth, api">
+                    </label>
+                    <label class="field">
+                        Resumen corto
+                        <input id="commit-summary" type="text" placeholder="Agrega vista de inicio" required>
+                    </label>
+                    <label class="field">
+                        Detalles
+                        <textarea id="commit-details" rows="4" placeholder="Explica el cambio"></textarea>
+                    </label>
+                    <label class="field checkbox">
+                        <input id="commit-breaking" type="checkbox">
+                        <span>Incluye cambio mayor (breaking)</span>
+                    </label>
+                    <label class="field">
+                        Detalle del breaking
+                        <input id="commit-breaking-detail" type="text" placeholder="Describe el impacto">
+                    </label>
+                    <label class="field">
+                        Issue o ticket
+                        <input id="commit-issue" type="text" placeholder="#123 o ABC-45">
+                    </label>
+                    <button class="primary" type="button" id="commit-copy">Copiar mensaje</button>
+                </form>
+                <div class="card">
+                    <h3>Vista previa</h3>
+                    <pre class="terminal" id="commit-preview">Completa el formulario para generar el mensaje.</pre>
+                    <p class="muted">Usa esta plantilla como base para tus commits.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="faq">
+            <div class="section-header">
+                <h2>Preguntas frecuentes</h2>
+                <p>Resuelve dudas tipicas durante el curso.</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-trigger" type="button" aria-expanded="false">
+                        Como practico conflictos reales?
+                    </button>
+                    <div class="accordion-panel">
+                        <p>Crea dos ramas, edita el mismo parrafo en cada una y fusiona.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" type="button" aria-expanded="false">
+                        Cuando debo usar rebase vs merge?
+                    </button>
+                    <div class="accordion-panel">
+                        <p>Usa rebase para limpiar tu historia local y merge para mantener contexto compartido.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" type="button" aria-expanded="false">
+                        Como hago commits pequenos?
+                    </button>
+                    <div class="accordion-panel">
+                        <p>Divide cambios con staging parcial y define una sola idea por commit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="feedback">
+            <div class="section-header">
+                <h2>Feedback del curso</h2>
+                <p>Formulario simple para simular cambios y validar inputs.</p>
+            </div>
+            <form class="card feedback-form" id="feedback-form">
+                <label class="field">
+                    Nombre
+                    <input id="feedback-name" type="text" required>
+                </label>
+                <label class="field">
+                    Correo
+                    <input id="feedback-email" type="email" required>
+                </label>
+                <label class="field">
+                    Comentario
+                    <textarea id="feedback-message" rows="4" required></textarea>
+                </label>
+                <button class="primary" type="submit">Enviar feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>Proyecto de practica Git</h3>
+            <p>Actualiza esta pagina con cada modulo para generar un historial real.</p>
+        </div>
+        <div class="footer-meta">
+            <span>Hecho para practicar Git y GitHub</span>
+            <button class="ghost" id="back-to-top" type="button">Volver arriba</button>
+        </div>
+    </footer>
+
+    <div class="modal" id="quick-guide" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h2 id="modal-title">Guia rapida</h2>
+            <p>Pasos sugeridos para tu siguiente practica.</p>
+            <ol class="plain-list ordered">
+                <li>Crear una rama nueva con el nombre del modulo.</li>
+                <li>Editar una seccion, guardar cambios parciales.</li>
+                <li>Hacer commit con el constructor de mensajes.</li>
+                <li>Fusionar en main y resolver conflictos.</li>
+            </ol>
+            <button class="primary" type="button" data-modal-close>Cerrar</button>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container" role="status" aria-live="polite"></div>
 
     <script src="app.js"></script>
 </body>
